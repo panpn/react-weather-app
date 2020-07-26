@@ -1,0 +1,167 @@
+{
+  "200": {
+    "icon": "storm"
+  },
+  "201": {
+    "icon": "storm"
+  },
+  "202": {
+    "icon": "storm"
+  },
+  "210": {
+    "icon": "storm"
+  },
+  "211": {
+    "icon": "storm"
+  },
+  "212": {
+    "icon": "storm"
+  },
+  "221": {
+    "icon": "storm"
+  },
+  "230": {
+    "icon": "storm"
+  },
+  "231": {
+    "icon": "storm"
+  },
+  "232": {
+    "icon": "storm"
+  },
+  "300": {
+    "icon": "rain-1"
+  },
+  "301": {
+    "icon": "rain-1"
+  },
+  "302": {
+    "icon": "rain-1"
+  },
+  "310": {
+    "icon": "rain-1"
+  },
+  "311": {
+    "icon": "rain-1"
+  },
+  "312": {
+    "icon": "rain-1"
+  },
+  "313": {
+    "icon": "rain-1"
+  },
+  "314": {
+    "icon": "rain-1"
+  },
+  "321": {
+    "icon": "rain-1"
+  },
+  "500": {
+    "icon": "rain-2"
+  },
+  "501": {
+    "icon": "rain-2"
+  },
+  "502": {
+    "icon": "rain"
+  },
+  "503": {
+    "icon": "rain"
+  },
+  "504": {
+    "icon": "rain"
+  },
+  "511": {
+    "icon": "snowing-3"
+  },
+  "520": {
+    "icon": "rain-2"
+  },
+  "521": {
+    "icon": "rain"
+  },
+  "522": {
+    "icon": "rain"
+  },
+  "531": {
+    "icon": "rain"
+  },
+  "600": {
+    "icon": "snowing"
+  },
+  "601": {
+    "icon": "snowing-2"
+  },
+  "602": {
+    "icon": "snowing-1"
+  },
+  "611": {
+    "icon": "snowing"
+  },
+  "612": {
+    "icon": "snowing-2"
+  },
+  "613": {
+    "icon": "snowing-1"
+  },
+  "615": {
+    "icon": "snowing-1"
+  },
+  "616": {
+    "icon": "snowing-1"
+  },
+  "620": {
+    "icon": "snowing-1"
+  },
+  "621": {
+    "icon": "snowing-3"
+  },
+  "622": {
+    "icon": "snowing-3"
+  },
+  "701": {
+    "icon": "tornado"
+  },
+  "711": {
+    "icon": "tornado"
+  },
+  "721": {
+    "icon": "tornado"
+  },
+  "731": {
+    "icon": "tornado"
+  },
+  "741": {
+    "icon": "tornado"
+  },
+  "751": {
+    "icon": "tornado"
+  },
+  "761": {
+    "icon": "tornado"
+  },
+  "762": {
+    "icon": "tornado"
+  },
+  "771": {
+    "icon": "tornado"
+  },
+  "781": {
+    "icon": "tornado"
+  },
+  "800": {
+    "icon": "sun"
+  },
+  "801": {
+    "icon": "cloudy-1"
+  },
+  "802": {
+    "icon": "cloudy"
+  },
+  "803": {
+    "icon": "cloud"
+  },
+  "804": {
+    "icon": "cloud"
+  }
+}
