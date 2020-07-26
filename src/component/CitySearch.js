@@ -21,7 +21,7 @@ export default function CitySearch(props) {
                 e.preventDefault();
             }}>
                 <FormControl error={hasError} variant="outlined">
-                    <InputLabel htmlFor="component-outlined">Name</InputLabel>
+                    <InputLabel htmlFor="component-outlined">City</InputLabel>
                     <OutlinedInput id="component-outlined" value={name} onChange={onChange} label="Name"/>
                     <FormHelperText id="component-error-text">{hasError && "Unknown City"} </FormHelperText>
                 </FormControl>

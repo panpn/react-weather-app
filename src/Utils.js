@@ -6,7 +6,6 @@ export const getImageUrl = (weatherId) => {
 }
 
 export const mapDataToInterface = (reading, tz) => {
-    // console.log("TZ: ", reading.dt,  tz)
     const mapped = {
         date: moment.unix(reading.dt).utcOffset(tz / 3600),
         // date: new Date(reading.dt * 1000),
@@ -19,7 +18,6 @@ export const mapDataToInterface = (reading, tz) => {
     };
     mapped.day = mapped.date.format("ddd D MMM Y")
     mapped.time = mapped.date.format("LT")
-    // console.log(mapped.date.toLocaleDateString('en-GB',{ timeZone: 'UTC+08' }))
     return mapped;
 }
 
@@ -40,6 +38,26 @@ export const groupDataToInterface = (fullData) => {
             }
         }
     )
-    // console.log(output);
     return output;
 };
+
+export const findMostFrequent = (itemList, attribute) => {
+    let counts = {};
+    let compare = 0;
+    let mostFrequent;
+    for (let i = 0; i < itemList.length; i++) {
+        const item = itemList[i];
+        const itemCount = counts[item[attribute]];
+        if (itemCount === undefined) {
+            counts[item[attribute]] = 1;
+
+        } else {
+            counts[item[attribute]] = itemCount + 1;
+        }
+        if(counts[item[attribute]] > compare){
+            compare = counts[item[attribute]];
+            mostFrequent = item[attribute];
+        }
+    }
+    return mostFrequent;
+}

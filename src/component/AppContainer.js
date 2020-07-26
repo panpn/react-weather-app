@@ -1,7 +1,7 @@
 import React from "react";
 import Box from "@material-ui/core/Box";
 import WeatherInfo from "./WeatherInfo";
-import {groupDataToInterface} from '../Utils'
+import {findMostFrequent, groupDataToInterface} from '../Utils'
 import {apiConfig} from '../apiKeys'
 import CitySearch from "./CitySearch";
 import * as defaultData from "../sample_data_singapore";
@@ -35,7 +35,6 @@ export class AppContainer extends React.Component {
     };
 
     weatherSearch = () => {
-        // // console.log(this.state.name);
         // return;
         const weatherURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + encodeURIComponent(this.state.name) + "&units=metric&appid=" + encodeURIComponent(apiConfig);
         fetch(weatherURL)
@@ -73,9 +72,9 @@ export class AppContainer extends React.Component {
 
     formatWeatherCards = () => {
         return this.state.dailyData.map((dayReading, index) => <WeatherInfo day={dayReading[0].day}
-                                                                            icon_id={dayReading[0].weather}
+                                                                            icon_id={findMostFrequent(dayReading, "weather")}
                                                                             key={index}
-                                                                            label={dayReading[0].description}
+                                                                            label={findMostFrequent(dayReading, "description")}
                                                                             card_id={index}
                                                                             dayReading={dayReading}/>
         )
