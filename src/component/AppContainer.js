@@ -13,12 +13,11 @@ export class AppContainer extends React.Component {
         this.onSearchQueryChange = this.onSearchQueryChange.bind(this);
         this.state = {
             name: "Singapore",
-            typing: false,
             error: false,
             typingTimeout: 0,
+            loading: false,
             fullData: defaultData.default,
             dailyData: groupDataToInterface(defaultData.default)
-            // open: true
         };
 
     }
@@ -36,7 +35,7 @@ export class AppContainer extends React.Component {
     };
 
     weatherSearch = () => {
-        console.log(this.state.name);
+        // // console.log(this.state.name);
         // return;
         const weatherURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + encodeURIComponent(this.state.name) + "&units=metric&appid=" + encodeURIComponent(apiConfig);
         fetch(weatherURL)
@@ -47,14 +46,15 @@ export class AppContainer extends React.Component {
                     this.setState({
                         fullData: data.list,
                         dailyData: dailyData,
-                        error: false
-                    }, () => console.log(this.state))
+                        error: false,
+                        loading: false
+                    })
                 } else {
                     this.setState({
-                        error: true
+                        error: true,
+                        loading: false
                     })
                 }
-
             })
     }
 
@@ -65,8 +65,8 @@ export class AppContainer extends React.Component {
 
         this.setState({
             name: e.target.value,
-            typing: false,
-            typingTimeout: setTimeout(this.weatherSearch, 1000)
+            typingTimeout: setTimeout(this.weatherSearch, 1000),
+            loading: true
         });
 
     }
@@ -82,10 +82,10 @@ export class AppContainer extends React.Component {
     };
 
     render() {
-        console.log(apiConfig);
         return (
             <div>
-                <CitySearch name={this.state.name} onChange={this.onSearchQueryChange} hasError={this.state.error}/>
+                <CitySearch name={this.state.name} onChange={this.onSearchQueryChange} hasError={this.state.error}
+                            loading={this.state.loading}/>
                 <Box display="flex">
                     {this.formatWeatherCards()}
                     {/*<WeatherCard date="Monday" icon_id="cloud"/>*/}

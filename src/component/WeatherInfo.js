@@ -7,12 +7,12 @@ export default function WeatherInfo(props) {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => {
         setOpen(true);
-        console.log("handling open " + props.card_id);
+        // console.log("handling open " + props.card_id);
     };
 
     const handleClose = () => {
         setOpen(false);
-        console.log("handling close " + props.card_id);
+        // console.log("handling close " + props.card_id);
     };
 
     return (
